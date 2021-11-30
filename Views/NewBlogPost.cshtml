@@ -1,0 +1,12 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.NewBlogPost>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<p>@Model.Value("blogTitle")</p>
+
+<img class="img-fluid" src="@Model.BlogImage.Url()"/>
+
+<h3>@Model.Value("blogText")</h3>
